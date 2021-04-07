@@ -42,7 +42,8 @@ class CustomerAdd extends React.Component {
             birthday: '',
             gender: '',
             job: '',
-            fileName: ''
+            fileName: '',
+            open: false
         })
     }
 
@@ -94,7 +95,7 @@ class CustomerAdd extends React.Component {
     }
 
     render() {
-        const {classes } = this.props;
+        const { classes } = this.props;
         return (
             <div>
                 <Button variant="contained" color="primary" onClick={this.handleClickOpen}>고객 추가하기</Button>

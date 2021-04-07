@@ -39,19 +39,21 @@ class CustomerDelete extends React.Component {
     render() {
         return (
             <div>
-            <Button variant="contained" color="secondary" onClick={this.handleClickOpen}>삭제</Button>
-            <Dialog open={this.state.open} onClose={this.handleClose}>
-                <DialogTitle onClose={this.handleClose}>
-                    삭제 확인
-                </DialogTitle>
-                <DialogContent>
-                    선택한 고객을 정말 삭제하시겠습니까?
-                </DialogContent>
-                <DialogActions>
-                    <Button variant="contained" color="primary" onClick={(e) => {this.deleteCustomer(this.props.id)}}>삭제</Button>
-                    <Button variant="contained" color="primary" onClick={this.handleClose}>취소</Button>
-                </DialogActions>
-            </Dialog>
+                <Button variant="contained" color="secondary" onClick={this.    handleClickOpen}>삭제</Button>
+                <Dialog open={this.state.open} onClose={this.handleClose}>
+                    <DialogTitle onClose={this.handleClose}>
+                        삭제 확인
+                    </DialogTitle>
+                    <DialogContent>
+                        <Typography gutterBottom>
+                        선택한 고객을 정말 삭제하시겠습니까?
+                        </Typography>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button variant="contained" color="primary" onClick={   (e) => {this.deleteCustomer(this.props.id)}}>삭제</    Button>
+                        <Button variant="contained" color="primary" onClick=    {this.handleClose}>취소</Button>
+                    </DialogActions>
+                </Dialog>
             </div>
         )
     }
